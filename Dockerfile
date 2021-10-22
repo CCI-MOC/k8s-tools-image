@@ -31,4 +31,7 @@ COPY --from=builder /tmp/linux-amd64/helm /usr/local/bin
 COPY --from=builder /tmp/oc /usr/local/bin
 COPY --from=builder /tmp/kubectl /usr/local/bin
 
-RUN yum -y install git
+RUN yum -y install \
+	git \
+	diffutils \
+	findutils
