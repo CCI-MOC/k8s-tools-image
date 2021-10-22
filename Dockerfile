@@ -30,3 +30,5 @@ COPY --from=builder /tmp/conftest /usr/local/bin
 COPY --from=builder /tmp/linux-amd64/helm /usr/local/bin
 COPY --from=builder /tmp/oc /usr/local/bin
 COPY --from=builder /tmp/kubectl /usr/local/bin
+
+RUN yum -y install git
