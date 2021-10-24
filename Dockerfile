@@ -34,4 +34,6 @@ COPY --from=builder /tmp/kubectl /usr/local/bin
 RUN yum -y install \
 	git \
 	diffutils \
-	findutils
+	findutils \
+	python3 \
+	python3-pip
